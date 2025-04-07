@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+   body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgb(1, 5, 16), rgb(10, 47, 106));
+    position: relative;
+    overflow: hidden;
+   }
+   .foguete{
+    height:  6em;
+    width: auto;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    transition: all ease-in-out 1500ms;
+   }
+   .foguete img{
+    height: 100%;
+    width: auto;
+   }
+   .decolar {
+    transform: translate(800px,-800px);
+   }
+   .rodar{
+    transform: rotate(360deg);
+   }
+   .descer{
+    transform: translate(-900px,800px);
+   }
+   .pequeno {
+    height:  3em;
+   }
+.grande{
+    height: 24em;
+}
+
+   

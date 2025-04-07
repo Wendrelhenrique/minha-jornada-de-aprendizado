@@ -1,0 +1,9 @@
+{
+  background.fullscreen: {
+    images: ["https://backiee.com/static/wallpapers/560x315/176116.jpg"]
+    opacity: 0.91 
+    size: cover
+    position: center
+    interval: 0 
+  }
+}
