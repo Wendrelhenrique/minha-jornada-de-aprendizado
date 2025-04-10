@@ -4,3 +4,4 @@ for(i = 0 ;i<(maior.length-1);i++){
     somadedois = maior[i] + maior[i+1]
    console.log("O soma do indice atual com o proximo numero é ",somadedois)
 }
+console.log("o primeiro é o ultimo ",maior[0]+maior[maior.length-1])
