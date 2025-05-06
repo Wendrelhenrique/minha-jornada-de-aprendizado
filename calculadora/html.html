@@ -1,0 +1,33 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="css.css">
+  <script defer src="js.js"></script>
+
+</head>
+<body>
+  <div class="calculadora">
+    <input type="number" id="display" />
+    <div class="botoes">
+    <button onclick=limpar()>C</button>
+    <button onclick="dividir(valores)">/</button>
+    <button onclick="multiplicar(valores)">*</button>
+    <button onclick="subtracao(valores)">-</button>
+    <button onclick="adicao(valores)">+</button>
+    <button onclick="porcento(valores)">%</button>
+    <button onclick="hipotenusa(valores)">hp</button>
+    <button onclick="jurossimples(valores)">js</button>
+    <button onclick="juroscomposto(valores)">jc</button>
+    <button onclick="fatorial(valores)">!</button>
+    <button onclick="raiz(valores)">R</button>
+    <button onclick="volts(valores)">V</button>
+    <button onclick="resistencia(valores)">Re</button>
+    <button onclick="ampers(valores)">A</button>
+    <button onclick="adicionarValor()">Inserir</button>
+    </div>
+  </div>
+  <div class="fundo-formulas" id="fundoFormulas"></div>
+</body>
+</html>

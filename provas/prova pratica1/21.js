@@ -3,9 +3,9 @@ function crescente (nume){
 for ( i = 0; i < num.length - 1; i++) {
      for ( j = 0; j < num.length - 1 - i; j++) {
      if (num[j] > num[j + 1]) {
-    let temp = num[j];
+    let atual = num[j];
      num[j] = num[j + 1];
-    num[j + 1] = temp;
+    num[j + 1] = atual;
    } 
  }
 }
@@ -17,9 +17,9 @@ return num
     for ( i = 0; i < num.length - 1; i++) {
          for ( j = 0; j < num.length - 1 - i; j++) {
          if (num[j] < num[j + 1]) {
-        let temp = num[j];
+        let atual = num[j];
          num[j] = num[j + 1];
-        num[j + 1] = temp;
+        num[j + 1] = atual;
        }
      }
     }
