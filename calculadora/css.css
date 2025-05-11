@@ -13,7 +13,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px #00000088;
-    width: 350px;
+    width: 450px;
     position: relative;
     z-index: 1;
   }
@@ -30,7 +30,7 @@ body {
   }
   .botoes {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
   }
   
@@ -50,7 +50,7 @@ body {
   }
 
   h3{
-      width: 83%;
+      width: 90%;
       height: 55px;
       top:-10px;
       left: 20px;

@@ -35,7 +35,7 @@ const formulasMap = {
     resistencia: "R = V ÷ I",
     ampers: "I = V ÷ R",
     energia: "E(J)= m(kg)·299 792 458(metros/segundo)^2",
-    quadradica: "exemplo: f(x) = x^2 – 5x + 6 ==> a=1 b=(-5) c=6",
+    quadradica: "Ex: f(x) = x^2 – 5x + 6 ==> a=1 b=(-5) c=6",
     progresaogeral: "resultado = a1 + (n - 1) r",
     progresaosoma: "resultado = ((a1+a2)*n)/2",
     progresaogeo: "resultado = a1 . q^(n-1)",
@@ -54,8 +54,8 @@ function mostrarFormulaFundo(nomeFuncao) {
 }
 function renderOnScreen(newValue) {
     const screen =   document.querySelector('.calculadora');
-    console.log('hi! ', screen)
-    console.log('hi! ', newValue)
+    console.log( screen)
+    console.log( newValue)
     screen.innerHTML += ` <h3>R: ${newValue}    </h3> `
 
 }
@@ -63,6 +63,7 @@ function multiplicar() {
     if (valores.length === 0) return 0;
     let resposta = (valores.reduce((produto, numero) => produto * numero, 1))
     console.log("multiplicação",resposta);
+    renderOnScreen(resposta);
     mostrarFormulaFundo("multiplicar")
     return resposta;
 }
@@ -206,12 +207,15 @@ function quadradica(){
     let resposta
     let resposta1
     let resposta2
+    let resposta3
     resposta = ((valores[1]*valores[1])-(4*valores[0]*valores[2]))
-    resposta1 = (((-valores[1])+Math.sqrt(resposta))/(2*valores[0]))
+    resposta3= Math.sqrt(resposta)
+    resposta1 = ((((valores[1])*-1)+resposta3)/(2*valores[0]))
+    resposta2 = ((((valores[1])*-1)-resposta3)/(2*valores[0]))
     console.log("respectivamente o discriminante ,x positivo é x negativo",resposta,resposta1,resposta2)
-    renderOnScreen('d',resposta," x1",resposta1," x2",resposta2)
+    renderOnScreen(resposta,resposta1,resposta2)
     mostrarFormulaFundo("quadradica")
-    return resposta,resposta1,resposta2
+    return {resposta,resposta1,resposta2}
 }
 function progresaogeral(){
     let resposta
