@@ -26,14 +26,20 @@ const formulasMap = {
     multiplicar: "a × b × ... × n",
     dividir: "a ÷ b ÷ ... ÷ n",
     porcento: "(base × porcentagem) ÷ 100",
-    hipotenusa: "√(a² + b²)",
+    hipotenusa: "√(a^2 + b^2)",
     jurossimples: "J = C × i × t",
     juroscomposto: "M = C × (1 + i)^t",
     fatorial: "n! = n × (n-1) × ... × 1",
     raiz: "n√x = x^(1/n)",
     volts: "V = R × I",
     resistencia: "R = V ÷ I",
-    ampers: "I = V ÷ R"
+    ampers: "I = V ÷ R",
+    energia: "E(J)= m(kg)·299 792 458(metros/segundo)^2",
+    quadradica: "exemplo: f(x) = x^2 – 5x + 6 ==> a=1 b=(-5) c=6",
+    progresaogeral: "resultado = a1 + (n - 1) r",
+    progresaosoma: "resultado = ((a1+a2)*n)/2",
+    progresaogeo: "resultado = a1 . q^(n-1)",
+    progresaogeos: "resultado = a1*((1-q^n)/(1-q))",
 };
 
 function mostrarFormulaFundo(nomeFuncao) {
@@ -186,5 +192,48 @@ function ampers(){
     console.log("os ampers ",resposta)
     renderOnScreen(resposta)
     mostrarFormulaFundo("ampers")
+    return resposta
+}
+function energia(){
+    let resposta
+    resposta = (valores[0]*(valores[1]*valores[1]))
+    console.log("A energia que compoem tal materia é ",resposta)
+    renderOnScreen(resposta)
+    mostrarFormulaFundo("energia")
+    return resposta
+}
+function quadradica(){
+    let resposta
+    let resposta1
+    let resposta2
+    resposta = ((valores[1]*valores[1])-(4*valores[0]*valores[2]))
+    resposta1 = (((-valores[1])+Math.sqrt(resposta))/(2*valores[0]))
+    console.log("respectivamente o discriminante ,x positivo é x negativo",resposta,resposta1,resposta2)
+    renderOnScreen('d',resposta," x1",resposta1," x2",resposta2)
+    mostrarFormulaFundo("quadradica")
+    return resposta,resposta1,resposta2
+}
+function progresaogeral(){
+    let resposta
+    resposta = (valores[0]+(valores[1]-1)*valores[2])
+    console.log("O valor do seu item de numero ",valores[1]," é ",resposta)
+    renderOnScreen(resposta)
+    mostrarFormulaFundo("progresaogeral")
+    return resposta
+}
+function progresaosoma(){
+    let resposta
+    resposta = (((valores[0]+valores[1])*valores[2])/2)
+    console.log("A soma dos deus item da progresao é",resposta)
+    renderOnScreen(resposta)
+    mostrarFormulaFundo("progresaosoma")
+    return resposta
+}
+function progresaogeos(){
+    let resposta
+    resposta = (valores[0]*((1-Math.pow(valores[1],valores[2]))/(1-valores[1])))
+    console.log("A soma da progresao geometrica é",resposta)
+    renderOnScreen(resposta)
+    mostrarFormulaFundo("progresaogeos")
     return resposta
 }
